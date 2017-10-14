@@ -5,5 +5,4 @@ root 'artists#index'
 resources :artists, only: [:index, :show, :destroy]
 resources :songs
 
-
 end

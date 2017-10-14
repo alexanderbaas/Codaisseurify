@@ -8,10 +8,14 @@
 </head>
 <body>
 
-  <%= @songs.title %>
 
-  <button type="button" name="button"><%= link_to "New Song" , new_song_path(song_url) %></button>
+<% @songs.each do |song| %>
+<%= song.title %> <br>
+<% end %>
+  <button type="button" name="button"><%= link_to "New Song" , new_song_path %></button>
 
-<%= link_to "Songs", songs_path %>
+
+
+
 </body>
 </html>
