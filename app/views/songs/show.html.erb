@@ -7,14 +7,8 @@
   <title>Document</title>
 </head>
 <body>
-  <h1>indexpage</h1>
-
-  <% @artists.each do |artist| %>
-  <!-- <div>
-  <%= image_tag artist.remote_image_url %>
-</div> --> <br>
-  <%= link_to artist.name, artist_path(artist.id) %>
-  <% end %>
+  <%= songs.title %>
+  <button type="button" name="button"><%= link_to "New Song" , create_song_path %></button>
 
 </body>
 </html>

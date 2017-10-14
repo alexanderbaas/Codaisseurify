@@ -16,6 +16,8 @@ john_talabot = Artist.create!(name: "John Talabot", remote_image_url: "http://re
 #songs
 Song.create!([
             {title: "trackname", artist: bonobo},
+            {title: "trackname", artist: bonobo},
+            {title: "trackname", artist: bonobo},
             {title: "trackname", artist: son_sinaa},
             {title: "trackname", artist: onra},
             {title: "trackname", artist: trust},
