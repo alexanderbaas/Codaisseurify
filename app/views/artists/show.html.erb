@@ -7,17 +7,34 @@
   <title>Document</title>
 </head>
 <body>
+    <div class="centerBlock">
+      <h2>
+    <%= @artists.name %>
+      </h2>
+    </div>
 
-<%= @artists.name %>
-<br>
-  <% @artists.songs.each do |song| %>
-           <%= song.title %>
 
-     <button type="button" name="button"> <%= link_to "X", song_path(song.id), method: :delete, data: { confirm: "Are you sure?" } %> </button>
-<br>
- <% end %>
+    <div class="thumbnail centerBlock">
+        <a href="#"><%= image_tag @artists.remote_image_url %></a>
+    </div>
 
-     <button type="button" name="button"><%= link_to "New Song" , new_song_path %></button>
+
+    <br>
+    <div class="centerBlock">
+      <% @artists.songs.each do |song| %>
+               <%= song.title %>
+
+    <div class="caption centerBlock">
+          <%= link_to "Delete", song_path(song.id), method: :delete, data: { confirm: "Are you sure?" } %>
+    </div>
+
+    <br>
+     <% end %>
+    </div>
+
+    <div class="centerBlock">
+        <%= link_to "New Song" , new_song_path %>
+    </div>
 
 </body>
 </html>

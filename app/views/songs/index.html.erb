@@ -8,14 +8,25 @@
 </head>
 <body>
 
-
-<% @songs.each do |song| %>
-<%= song.title %> <br>
-<% end %>
-  <button type="button" name="button"><%= link_to "New Song" , new_song_path %></button>
+<h2 class="centerBlock midscreen"> All Songs</h2>
 
 
 
+    <% @songs.each do |song| %>
+      <div class="centerBlock">
+        <%= song.title %>
+      </div>
 
+          <br>
+            <div class="caption centerBlock">
+        <%= link_to "Delete", song_path(song.id), method: :delete, data: { confirm: "Are you sure?" } %>
+            </div>
+          <br>
+
+    <% end %>
+
+    <div class="centerBlock">
+        <%= link_to "New Song" , new_song_path %>
+    <div>
 </body>
 </html>

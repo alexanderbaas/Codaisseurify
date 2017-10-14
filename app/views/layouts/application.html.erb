@@ -3,13 +3,13 @@
   <head>
     <title>Codaisseurify</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   </head>
 
-  <body>
+  <body class="container">
     <%= yield %>
   </body>
-  <%= link_to "Artists", root_path %>
+  <div class="midscreen"> <%= link_to "All Artists", root_path %> </div>
 </html>
